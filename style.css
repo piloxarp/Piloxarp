@@ -187,6 +187,10 @@ body {
     backdrop-filter: blur(10px);
     font-size: 32px;
     transition: 0.3s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 .links a:hover  {
@@ -278,4 +282,51 @@ body {
 .fg_btn:hover {
     letter-spacing: 0.06em;
     border-style: solid;
+}
+
+@media screen and (max-width: 768px) {
+    .container_links .head_case, .container_projects .head_case {
+        padding: 10px 15px 10px 15px;
+    }
+
+    .container_links .head_case h2, .container_projects .head_case h2 {
+        font-size: 24px;
+    }
+
+    .links {
+        padding: 15px 15px 15px 15px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .links a {
+        font-size: 24px;
+    }
+
+    .container_me h1 {
+        font-size: 48px;
+    }
+
+    .fg_btn {
+        font-size: 24px;
+    }
+
+    .projects a {
+        width: 150px;
+        height: 200px;
+    }
+
+    .projects a svg {
+        font-size: 32px;
+        padding: 10px;
+    }
+
+    .projects a h3 {
+        font-size: 24px;
+    }
+
+    .projects a p {
+        font-size: 16px;
+    }
+
 }
