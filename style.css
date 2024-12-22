@@ -1,69 +1,14 @@
-:root, #theme_DEFAULT {
-    --bg: #1d131e;
-    --bg-image:url("img/default_bg.png");
-    --color1:#FF93E4;
-    --color2:#ffb4b5;
-    --color11:#ff93e42b;
-    --color22:#ffb4b53b;
-    --color1hover:#7a456d;
-    --color2hover:#835d5d;
-}
-
-#theme_BNWO {
+:root {
     --bg: #000000;
     --bg-image:url("img/bnwo_bg.png");
     --color1: #ffffff;
     --color2: #bfbfbf;
-    --color11: #0000002b;
-    --color22: #0000003b;
+    --color11: #8f8f8f3b;
+    --color22: #8f8f8f3b;
     --color1hover: #000000;
     --color2hover: #000000;
-    background-size: 50%;
 }
 
-#theme_GREEN {
-    --bg: #131e17;
-    --bg-image: url(img/default_bg.png);
-    --color1: #93ffaa;
-    --color2: #e6ffb4;
-    --color11: #93ffcb2b;
-    --color22: #b4ffe53b;
-    --color1hover: #457a4e;
-    --color2hover: #71835d;
-}
-
-#theme_BLUE {
-    --bg: #13191e;
-    --bg-image: url(img/default_bg.png);
-    --color1: #93c8ff;
-    --color2: #b4c8ff;
-    --color11: #93e8ff2b;
-    --color22: #b4c2ff3b;
-    --color1hover: #45697a;
-    --color2hover: #5d6283;
-}
-
-#theme_RED {
-    --bg: #1e1313;
-    --bg-image: url(img/default_bg.png);
-    --color1: #ff9393;
-    --color2: #ffb4da;
-    --color11: #ff93932b;
-    --color22: #ffb4ca3b;
-    --color1hover: #7a4545;
-    --color2hover: #835d66;
-}
-
-#theme_DESERT {
-    --bg: #1e1a13;
-    --bg-image: url(img/default_bg.png);
-    --color1: #ffed93;
-    --color2: #ffe8b4;
-    --color11: #fff0932b;
-    --color22: #ffeab43b;
-    --color1hover: #777a45;
-    --color2hover: #83805d;
-}
 
 
 
@@ -81,7 +26,7 @@ body {
     justify-content: center;
     padding-top: 30px;
     padding-bottom: 30px;
-    background-size: 7%;
+    background-size: 50%;
 }
 
 .container {
@@ -106,12 +51,6 @@ body {
     transition: 0.3s;
 }
 
-.container_me img:hover {
-    border-style: dashed;
-    cursor: pointer;
-    transition: 0.3s;
-    transform: scale(1.1);
-}
 
 .container_me p {
     font-style: italic;
@@ -153,7 +92,6 @@ body {
 .container_links .head_case, .container_projects .head_case {
     padding: 10px 30px 10px 30px;
     border-radius: 15px;
-    border: 2px solid var(--color1);
     background: var(--color11);
     backdrop-filter: blur(20px);
     width: fit-content;
@@ -168,20 +106,16 @@ body {
 .links {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    background: var(--color11);
-    backdrop-filter: blur(20px);
-    border: 2px solid var(--color1);
     border-radius: 15px;
-    padding: 15px 30px 15px 30px;
     gap:15px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .links a {
     padding: 15px;
     background: var(--color22);
-    border: 2px solid var(--color2);
     border-radius: 15px;
     color: var(--color2);
     backdrop-filter: blur(10px);
@@ -191,7 +125,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; 
+    width: 300px;
+    gap:30px;
 }
+
+.links h3 {
+        font-weight: 500;
+        font-size: 24px;
+    
+        margin-bottom: 5px;
+    }
+    
+    .links h3:hover {
+        color: var(--color2hover);
+     }
 
 .links a:hover  {
     background: var(--color2);
@@ -208,14 +155,13 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 15px;
 }
 
 .projects a {
     background: var(--color11);
-    backdrop-filter: blur(20px);
-    border: 2px solid var(--color1);
+    backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 15px;
     display: flex;
@@ -240,18 +186,19 @@ body {
 
 .projects a h3 {
     font-weight: 500;
-    font-size: 32px;
+    font-size: 26px;
     color: var(--color1);
 }
 
 .projects a p {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 17px;
     color: var(--color2);
+    text-align: center;
 }
 
 .projects a:hover {
-    background: var(--color1);
+    background: var(--color2);
     color: var(--color1hover);
 }
 
@@ -261,6 +208,10 @@ body {
 }
 
 .projects a:hover h3 {
+    color: var(--color1hover);
+}
+
+.projects a:hover p {
     color: var(--color1hover);
 }
 
@@ -292,15 +243,18 @@ body {
     .container_links .head_case h2, .container_projects .head_case h2 {
         font-size: 24px;
     }
+    .container {
+        width: 90%;
+    }
 
     .links {
-        padding: 15px 15px 15px 15px;
         flex-direction: column;
         align-items: stretch;
     }
 
     .links a {
         font-size: 24px;
+        width: 90%;
     }
 
     .container_me h1 {
@@ -312,8 +266,8 @@ body {
     }
 
     .projects a {
-        width: 150px;
-        height: 200px;
+            width: 100%;
+            height: auto;
     }
 
     .projects a svg {
